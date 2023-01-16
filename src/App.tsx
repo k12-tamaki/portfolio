@@ -1,13 +1,14 @@
 import React from 'react';
 // import logo from './media/logo.svg';
 // import './css/App.css';
-import Top from './Top'
 
-// import CssBaseline from "@mui/material/CssBaseline";
+import Box from '@mui/material/Box';
+import Toolbar from '@mui/material/Toolbar';
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-// import Button from "@mui/material/Button";
+
+import Top from './Top'
+import Profile from './Profile'
 import Header from "./components/header";
-// import { Box, Stack } from "@mui/material";
 
 function App() {
   const theme = createTheme({
@@ -18,33 +19,16 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Header />
-      {/* <Box
-        sx={{
-          display: "flex",
-          alignItems: "flex-start",
-          flexDirection: "column",
-          flexWrap: "nowrap",
-          p: 1,
-          m: 1,
-          bgcolor: "background.paper",
-          borderRadius: 1,
-        }}
-      >
-        <Stack direction="row" spacing={2}>
-          <Button variant="contained" color="primary">
-            メインカラー(contained)
-          </Button>
-          <Button variant="outlined" color="secondary">
-            セカンダリーカラー(outlined)
-          </Button>
-          <Button variant="text" color="success">
-            サクセスカラー(text)
-          </Button>
-        </Stack>
-      </Box> */}
-      <Top />
+      <Box>
+        <Header />
+        <Box component="main">
+          <Toolbar />
+          <Top />
+          <Profile />
+        </Box>
+      </Box>
     </ThemeProvider>
+
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />

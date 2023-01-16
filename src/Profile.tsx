@@ -1,15 +1,14 @@
 import React from 'react';
 // import './App.css';
 
-// import { ParallaxProvider } from 'react-scroll-parallax';
 import Box from '@mui/material/Box';
 
-function Top() {
+function Profile() {
   return (
     <Box className="App" style={{height: '100vh', width: '100%'}}>
-      Top
+      Profile
     </Box>
   );
 }
 
-export default Top;
+export default Profile;
