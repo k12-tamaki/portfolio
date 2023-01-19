@@ -47,7 +47,7 @@ const Typing = ({
       style={{ whiteSpace: 'pre-line' }}
       ref={msgEl}
     >
-      {'text'}
+      {text}
     </div>
   );
 };

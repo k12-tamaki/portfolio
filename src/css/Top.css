@@ -16,7 +16,7 @@
 }
 
 .topContent div {
-  width: 0px;
+  /* width: 0px; */
   display: inline-block;
   font: bold 200% Consolas, Monaco, monospace;
   overflow: hidden;
@@ -53,3 +53,15 @@
     border-right-color: currentColor;
   }
 } */
+
+
+.msg-box {
+  width: 100%;
+  min-height: 2em;
+  max-height: 6em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
+  padding: .5em;
+  background-color: #fff1e1;
+}
