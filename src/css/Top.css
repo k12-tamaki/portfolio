@@ -9,29 +9,13 @@
   width: 50%;
   height: 50%;
   border: solid 10px black;
-  /* height: 229px; */
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-}
-
-@font-face {
-	font-family: 'PokeFont';
-	src: url(../font/pkmn_s.ttf);
 }
 
 .topContent div {
-  /* width: 0px; */
   display: inline-block;
   /* font: bold 200% Consolas, Monaco, monospace; */
   overflow: hidden;
   white-space: nowrap;
   font-weight: 400;
   border-right: 2px solid transparent;
-
-  font-family: PokeFont;
-}
-
-testCss {
-  font-family: PokeFont;
 }
