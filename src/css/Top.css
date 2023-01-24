@@ -15,41 +15,23 @@
   /* align-items: center; */
 }
 
+@font-face {
+	font-family: 'PokeFont';
+	src: url(../font/pkmn_s.ttf);
+}
+
 .topContent div {
-  width: 0px;
+  /* width: 0px; */
   display: inline-block;
-  font: bold 200% Consolas, Monaco, monospace;
+  /* font: bold 200% Consolas, Monaco, monospace; */
   overflow: hidden;
   white-space: nowrap;
   font-weight: 400;
   border-right: 2px solid transparent;
+
+  font-family: PokeFont;
 }
 
-.topContent div.row1{
-  width: 100%;
-  animation: typing 6s steps(64), caret 0.3s steps(1) infinite;
+testCss {
+  font-family: PokeFont;
 }
-
-.topContent div.row2{
-  width: 100%;
-  animation: typing 6s steps(64), caret 0.3s steps(1) infinite;
-  animation-delay: 3s;
-}
-
-.topContent div.row3{
-  width: 100%;
-  animation: typing 6s steps(64), caret 0.3s steps(1) infinite;
-  animation-delay: 12s;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-}
-
-/* @keyframes caret {
-  50% {
-    border-right-color: currentColor;
-  }
-} */

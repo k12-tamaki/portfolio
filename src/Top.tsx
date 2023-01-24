@@ -1,5 +1,4 @@
-import React from 'react';
-// import './App.css';
+import { useEffect } from 'react';
 
 import './css/common.css';
 import './css/Top.css';
@@ -13,6 +12,7 @@ import {
 } from './components/typing';
 
 function Top() {
+  const message1 = 'はじめまして！\nたまなっつの　ポートフォリオの　せかいへ\nようこそ！';
   const {
     typeStart,
     inputRock,
@@ -27,20 +27,24 @@ function Top() {
     typeEnd();
   };
 
-  typeStart('');
+  useEffect(() => {
+    typeStart(message1);
+    console.log('Type Start!');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <Box className="mainContent top">
+      <Box className="testCss">
+        アアアアア
+      </Box>
       <Box className="topContent">
-      <Typing
-        className="msg-box"
-        speed={80}
-        typeEnd={doSomething}
-        {...params}
-      />
-        {/* <Box className="row1">はじめまして！</Box> */}
-        {/* <div className="row2">たまなっつの　ポートフォリオの　せかいへ</div> */}
-        {/* <div className="row3">ようこそ！</div> */}
+        <Typing
+          className="msg-box"
+          speed={80}
+          typeEnd={doSomething}
+          {...params}
+        />
       </Box>
     </Box>
   );

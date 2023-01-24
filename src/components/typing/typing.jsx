@@ -1,7 +1,6 @@
 import React, {
   useState,
-  useEffect,
-  useRef
+  useEffect
 } from 'react';
 import PropTypes from 'prop-types';
 
@@ -10,11 +9,10 @@ const Typing = ({
   typeEnd,
   cursor = true,
   className = '',
-  speed = 50
+  speed = 1
 }) => {
 
   const [text, setText] = useState('');
-  const msgEl = useRef();
 
   useEffect(() => {
     const charItr = message[Symbol.iterator]();
@@ -32,22 +30,15 @@ const Typing = ({
     }());
 
     return () => clearTimeout(timerId);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  useEffect(() => {
-    const el = msgEl.current;
-    if (el.clientHeight < el.scrollHeight) {
-      el.scrollTop = el.scrollHeight - el.clientHeight;
-    }
-  });
 
   return (
     <div
       className={className + (cursor ? ' cursor-blink' : '')}
       style={{ whiteSpace: 'pre-line' }}
-      ref={msgEl}
     >
-      {'text'}
+      {text}
     </div>
   );
 };
