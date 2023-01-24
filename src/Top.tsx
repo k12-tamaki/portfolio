@@ -6,10 +6,14 @@ import './css/Top.css';
 // import { ParallaxProvider } from 'react-scroll-parallax';
 import Box from '@mui/material/Box';
 
+import Input from './input';
+
 import {
   Typing,
   useTyping
 } from './components/typing';
+
+// const [value, setValue] = useState('');
 
 function Top() {
   const message1 = 'はじめまして！\nたまなっつの　ポートフォリオの　せかいへ\nようこそ！';
