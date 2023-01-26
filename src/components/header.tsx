@@ -13,14 +13,14 @@ interface Props {
   window?: () => Window;
 }
 
-const navItems = ['Home', 'About', 'Contact'];
+const navItems = ['Top', 'Profile', 'Career', 'Skill'];
 
 export default function Header(props: Props) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar component="nav" sx={{ backgroundColor: `rgba(244,251,254,0.5)` }}>
         <Toolbar>
           <Typography
             variant="h6"
@@ -31,7 +31,7 @@ export default function Header(props: Props) {
           </Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: '#fff' }}>
+              <Button key={item} sx={{ color: 'black', fontWeight: 'bold' }}>
                 {item}
               </Button>
             ))}

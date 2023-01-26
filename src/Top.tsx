@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import './css/common.css';
 import './css/Top.css';
 
-// import { ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import Box from '@mui/material/Box';
 
 import {
@@ -12,7 +12,7 @@ import {
 } from './components/typing';
 
 function Top() {
-  const message1 = 'はじめまして！\nたまなっつの　ポートフォリオの　せかいへ\nようこそ！';
+  const message1 = "Welcome To Tama's Portfolio";
   const {
     typeStart,
     inputRock,
@@ -34,17 +34,19 @@ function Top() {
   }, [])
 
   return (
-    <Box className="mainContent top">
-      <Box className="topContent">
-        <Typing
-          className="msg-box"
-          speed={80}
-          typeEnd={doSomething}
-          cursor={true}
-          {...params}
-        />
+    <Parallax speed={-30}>
+      <Box className="mainContent top">
+        <Box className="topContent">
+          <Typing
+            className="msg-box"
+            speed={80}
+            typeEnd={doSomething}
+            cursor={true}
+            {...params}
+          />
+        </Box>
       </Box>
-    </Box>
+    </Parallax>
   );
 }
 
