@@ -40,6 +40,7 @@ function Top() {
           className="msg-box"
           speed={80}
           typeEnd={doSomething}
+          cursor={true}
           {...params}
         />
       </Box>
