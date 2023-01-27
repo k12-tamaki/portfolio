@@ -2,6 +2,8 @@ import React, {
   useState,
   useEffect,
 } from 'react';
+
+import Box from '@mui/material/Box';
 // import PropTypes from 'prop-types';
 
 const Typing: React.FunctionComponent<{
@@ -40,12 +42,12 @@ const Typing: React.FunctionComponent<{
   }, []);
 
   return (
-    <div
+    <Box
       className={className + (cursor ? ' cursor-blink' : '')}
       style={{ whiteSpace: 'pre-line' }}
     >
       {text}
-    </div>
+    </Box>
   );
 };
 

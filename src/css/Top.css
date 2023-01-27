@@ -1,5 +1,4 @@
 .top {
-  /* background-color: antiquewhite; */
   display: flex;
   justify-content: center;
   align-items:center;
@@ -7,19 +6,18 @@
 
 .topContent {
   width: 80%;
-  height: 80%;
-  /* border: solid 5px #F4FBFE; */
+  height: 60%;
+  /* background: rgba( 255, 255, 255, 0.3 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1px );
+  -webkit-backdrop-filter: blur( 1px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ); */
 }
 
 .topContent div {
-  width: 100%;
-  height: 100%;
-  line-height: 100%;
-  display: inline-block;
   font: bold 300% Consolas, Monaco, monospace;
-  color: #F4FBFE;
-  /* font-weight: bold; */
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 2px solid transparent;
+  position: absolute;
+  top: 45%;
+  left: 10%;
 }

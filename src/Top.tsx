@@ -34,7 +34,7 @@ function Top() {
   }, [])
 
   return (
-    <Parallax speed={-30}>
+    <Parallax speed={-10}>
       <Box className="mainContent top">
         <Box className="topContent">
           <Typing
