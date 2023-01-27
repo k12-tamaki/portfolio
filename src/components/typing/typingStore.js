@@ -6,7 +6,7 @@ const useTyping = () => {
   const [inputRock, setRock] = useState(false);
 
   const typeStart = (text = '') => {
-    setKey(current => current + 1);
+    setKey((current) => current + 1);
     setRock(true);
     setMessage(text);
   };

@@ -6,16 +6,14 @@ import './css/Top.css';
 import { Parallax } from 'react-scroll-parallax';
 import Box from '@mui/material/Box';
 
-import {
-  Typing,
-  useTyping
-} from './components/typing';
+import { Typing, useTyping } from './components/typing';
 
 function Top() {
-  const message1 = "Welcome To Tama's Portfolio";
+  const message1 =
+    "Welcome To Tama's Portfolio\nここは「タマ」のポートフォリオです";
   const {
     typeStart,
-    inputRock,
+    // inputRock,
     typeEnd,
     ...params
   } = useTyping();
@@ -30,13 +28,12 @@ function Top() {
   useEffect(() => {
     typeStart(message1);
     console.log('Type Start!');
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   return (
     <Parallax speed={-10}>
-      <Box className="mainContent top">
-        <Box className="topContent">
+      <Box className="mainContent content">
+        <Box className="top">
           <Typing
             className="msg-box"
             speed={80}

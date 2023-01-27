@@ -1,7 +1,4 @@
-import React, {
-  useState,
-  useEffect,
-} from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Box from '@mui/material/Box';
 // import PropTypes from 'prop-types';
@@ -12,14 +9,7 @@ const Typing: React.FunctionComponent<{
   cursor: Boolean;
   className: String;
   speed: number | undefined;
-}> = ({
-  message,
-  typeEnd,
-  cursor = true,
-  className = '',
-  speed = 1
-}) => {
-
+}> = ({ message, typeEnd, cursor = true, className = '', speed = 1 }) => {
   const [text, setText] = useState('');
 
   useEffect(() => {
@@ -32,13 +22,12 @@ const Typing: React.FunctionComponent<{
         typeEnd();
         return;
       }
-      setText(current => current + nextChar.value);
+      setText((current) => current + nextChar.value);
 
       timerId = setTimeout(showChar, speed);
-    }());
+    })();
 
     return () => clearTimeout(timerId);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

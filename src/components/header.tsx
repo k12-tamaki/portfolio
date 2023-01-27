@@ -5,18 +5,18 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
-interface Props {
-  /**
-   * Injected by the documentation to work in an iframe.
-   * You won't need it on your project.
-   */
-  window?: () => Window;
-}
+
+// interface Props {
+//   /**
+//    * Injected by the documentation to work in an iframe.
+//    * You won't need it on your project.
+//    */
+//   window?: () => Window;
+// }
 
 const navItems = ['Top', 'Profile', 'Career', 'Skill'];
 
-export default function Header(props: Props) {
-
+export default function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />

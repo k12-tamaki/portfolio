@@ -2,32 +2,37 @@ import React from 'react';
 
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { ThemeProvider, createTheme } from '@mui/material/styles';
 
 import { ParallaxProvider } from 'react-scroll-parallax';
 
-import Header from "./components/header";
-import Top from './Top'
-import Profile from './Profile'
+import Header from './components/header';
+import Top from './Top';
+import Profile from './Profile';
+import Career from './Career';
 
 import BackGroundImage from './media/background.jpg';
 
 function App() {
   const theme = createTheme({
     palette: {
-      mode: "light",
+      mode: 'light',
     },
   });
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{color: '#F4FBFE', font: 'Consolas, Monaco, monospace'}}>
+      <Box sx={{ color: '#F4FBFE', font: 'Consolas, Monaco, monospace' }}>
         <Header />
-        <Box component="main" sx={{backgroundImage: `url(${BackGroundImage})`}}>
+        <Box
+          component="main"
+          sx={{ backgroundImage: `url(${BackGroundImage})` }}
+        >
           <Toolbar />
           <ParallaxProvider>
             <Top />
             <Profile />
+            <Career />
           </ParallaxProvider>
         </Box>
       </Box>
