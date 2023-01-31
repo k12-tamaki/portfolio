@@ -26,7 +26,9 @@ function App() {
         <Header />
         <Box
           component="main"
-          sx={{ backgroundImage: `url(${BackGroundImage})` }}
+          sx={{
+            background: `url(${BackGroundImage}) repeat`,
+          }}
         >
           <Toolbar />
           <ParallaxProvider>
