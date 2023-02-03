@@ -13,11 +13,11 @@ const Typing: React.FC<{
   const [text, setText] = useState('');
 
   useEffect(() => {
-    const charItr = message[Symbol.iterator]();
+    const charItr: IterableIterator<string> = message[Symbol.iterator]();
     let timerId: NodeJS.Timer;
 
     (function showChar() {
-      const nextChar = charItr.next();
+      const nextChar: IteratorResult<string> = charItr.next();
       if (nextChar.done) {
         typeEnd();
         return;

@@ -7,7 +7,7 @@ import CareerCard from './components/CareerCard';
 
 import './css/common.css';
 
-function Career() {
+const Career: React.FC = () => {
   interface cardObj {
     imagePath: string;
     cardTitle: string;
@@ -28,7 +28,7 @@ function Career() {
     },
   ];
 
-  const hobbyArrayObject = [
+  const hobbyArrayObject: cardObj[] = [
     {
       imagePath: '/static/website_normal.png',
       cardTitle: 'ポートフォリオ',
@@ -70,6 +70,6 @@ function Career() {
       </Box>
     </Box>
   );
-}
+};
 
 export default Career;

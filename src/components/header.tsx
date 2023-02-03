@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 
 const navItems = ['Top', 'Profile', 'Career', 'Skill'];
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <CssBaseline />
@@ -40,4 +40,6 @@ export default function Header() {
       </AppBar>
     </Box>
   );
-}
+};
+
+export default Header;

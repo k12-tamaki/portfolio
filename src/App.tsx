@@ -13,7 +13,7 @@ import Career from './Career';
 
 import BackGroundImage from './media/background.jpg';
 
-function App() {
+const App: React.FC = () => {
   const theme = createTheme({
     palette: {
       mode: 'light',
@@ -57,6 +57,6 @@ function App() {
     //   </header>
     // </div>
   );
-}
+};
 
 export default App;

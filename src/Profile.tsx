@@ -9,7 +9,7 @@ import ProfileMessage from './components/ProfileMessage';
 import './css/common.css';
 import './css/Profile.css';
 
-function Profile() {
+const Profile: React.FC = () => {
   return (
     <Box className="mainContent">
       <Box className="title">Profile</Box>
@@ -63,6 +63,6 @@ function Profile() {
       </Box>
     </Box>
   );
-}
+};
 
 export default Profile;
