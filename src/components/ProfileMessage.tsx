@@ -3,9 +3,9 @@ import React from 'react';
 import Box from '@mui/material/Box';
 
 const ProfileMessage: React.FC<{
-  message1: String;
-  message2: String;
-  message3: String;
+  message1: string;
+  message2: string;
+  message3: string;
 }> = ({ message1, message2, message3 }) => {
   return (
     <Box>

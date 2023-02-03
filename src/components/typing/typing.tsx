@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import Box from '@mui/material/Box';
 // import PropTypes from 'prop-types';
 
-const Typing: React.FunctionComponent<{
-  message: String;
+const Typing: React.FC<{
+  message: string;
   typeEnd: () => void;
-  cursor: Boolean;
-  className: String;
+  cursor: boolean;
+  className: string;
   speed: number | undefined;
 }> = ({ message, typeEnd, cursor = true, className = '', speed = 1 }) => {
   const [text, setText] = useState('');
