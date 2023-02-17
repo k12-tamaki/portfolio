@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 
 import { Typing, useTyping } from './components/typing';
 
-function Top() {
+const Top: React.FC = () => {
   const message1 =
     "Welcome To Tama's Portfolio\nここは「タマ」のポートフォリオです";
   const {
@@ -45,6 +45,6 @@ function Top() {
       </Box>
     </Parallax>
   );
-}
+};
 
 export default Top;
