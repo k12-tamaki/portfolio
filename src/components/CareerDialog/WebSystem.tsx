@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Unstable_Grid2';
+// import Grid from '@mui/material/Unstable_Grid2';
 
 const WebSystem: React.FC = () => {
   return (
