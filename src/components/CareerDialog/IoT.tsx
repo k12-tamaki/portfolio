@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 
-const WebSystem: React.FC = () => {
+const IoT: React.FC = () => {
   return (
     <>
       <Grid container spacing={2}>
@@ -13,7 +13,7 @@ const WebSystem: React.FC = () => {
           </Box>
         </Grid>
         <Grid xs={4}>
-          <Typography>Webシステムの構築</Typography>
+          <Typography>IoT</Typography>
           <Typography>
             業者向けにWebシステムの構築を実施していました。
           </Typography>
@@ -31,4 +31,4 @@ const WebSystem: React.FC = () => {
   );
 };
 
-export default WebSystem;
+export default IoT;

@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 // import Button from '@mui/material/Button';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import Dialog from '@mui/material/Dialog';
 import DialogTitle from '@mui/material/DialogTitle';
 import DialogContent from '@mui/material/DialogContent';
@@ -18,15 +18,8 @@ import CloseIcon from '@mui/icons-material/Close';
 // import Typography from '@mui/material/Typography';
 
 import WebSystem from './CareerDialog/WebSystem';
-
-const BootstrapDialog = styled(Dialog)(({ theme }) => ({
-  '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
-  },
-  '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
-  },
-}));
+import IoT from './CareerDialog/IoT';
+import Robot from './CareerDialog/Robot';
 
 const BootstrapDialogTitle: React.FC<{
   children?: React.ReactNode;
@@ -54,9 +47,10 @@ const BootstrapDialogTitle: React.FC<{
 };
 
 const CareerCard: React.FC<{
+  component: string;
   imagePath: string;
   cardTitle: string;
-}> = ({ imagePath, cardTitle }) => {
+}> = ({ component, imagePath, cardTitle }) => {
   const [open, setOpen] = React.useState(false);
 
   const handleClickOpen = () => {
@@ -66,7 +60,8 @@ const CareerCard: React.FC<{
     setOpen(false);
   };
 
-  const isWebSystem = cardTitle == 'Webシステム';
+  // const isWebSystem = component == 'Web';
+  // const isWebSystem = component == 'Web';
 
   return (
     <Box>
@@ -86,21 +81,28 @@ const CareerCard: React.FC<{
         </CardActionArea>
       </Card>
 
-      <BootstrapDialog
+      <Dialog
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        maxWidth={false}
+        fullWidth={true}
       >
         <BootstrapDialogTitle onClose={handleClose}>
           {cardTitle}
         </BootstrapDialogTitle>
-        <DialogContent dividers>{isWebSystem && <WebSystem />}</DialogContent>
+        <DialogContent dividers>
+          {component == 'Web' && <WebSystem />}
+          {component == 'IoT' && <IoT />}
+          {component == 'Robot' && <Robot />}
+        </DialogContent>
+        {/* <DialogContent dividers>{isWebSystem && <WebSystem />}</DialogContent> */}
         {/* <DialogActions>
           <Button autoFocus onClick={handleClose}>
             Save changes
           </Button>
         </DialogActions> */}
-      </BootstrapDialog>
+      </Dialog>
     </Box>
   );
 };

@@ -10,6 +10,7 @@ import Header from './components/header';
 import Top from './Top';
 import Profile from './Profile';
 import Career from './Career';
+import Skill from './Skill';
 
 import BackGroundImage from './media/background.jpg';
 
@@ -35,6 +36,7 @@ function App() {
             <Top />
             <Profile />
             <Career />
+            <Skill />
           </ParallaxProvider>
         </Box>
       </Box>

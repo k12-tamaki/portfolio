@@ -8,32 +8,38 @@ import CareerCard from './components/CareerCard';
 import './css/common.css';
 
 function Career() {
-  interface cardObj {
+  type cardObj = {
+    component: string;
     imagePath: string;
     cardTitle: string;
-  }
+  };
 
   const workArrayObject: cardObj[] = [
     {
+      component: 'Web',
       imagePath: '/static/website_normal.png',
       cardTitle: 'Webシステム',
     },
     {
+      component: 'IoT',
       imagePath: '/static/website_normal.png',
       cardTitle: 'IoTシステム',
     },
     {
+      component: 'Robot',
       imagePath: '/static/website_normal.png',
       cardTitle: 'ロボット',
     },
   ];
 
-  const hobbyArrayObject = [
+  const hobbyArrayObject: cardObj[] = [
     {
+      component: 'Portfolio',
       imagePath: '/static/website_normal.png',
       cardTitle: 'ポートフォリオ',
     },
     {
+      component: 'Wedding',
       imagePath: '/static/website_normal.png',
       cardTitle: '結婚式HP',
     },
@@ -49,6 +55,7 @@ function Career() {
             {workArrayObject.map((workObject, workIndex) => (
               <Grid xs={4} key={workIndex}>
                 <CareerCard
+                  component={workObject.component}
                   imagePath={workObject.imagePath}
                   cardTitle={workObject.cardTitle}
                 />
@@ -60,6 +67,7 @@ function Career() {
             {hobbyArrayObject.map((hobbyObject, hobbyIndex) => (
               <Grid xs={4} key={hobbyIndex}>
                 <CareerCard
+                  component={hobbyObject.component}
                   imagePath={hobbyObject.imagePath}
                   cardTitle={hobbyObject.cardTitle}
                 />
