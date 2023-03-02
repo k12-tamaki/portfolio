@@ -17,18 +17,18 @@ function Career() {
   const workArrayObject: cardObj[] = [
     {
       component: 'Web',
-      imagePath: '/static/website_normal.png',
-      cardTitle: 'Webシステム',
+      imagePath: '/static/web_s.jpg',
+      cardTitle: 'Web',
     },
     {
       component: 'IoT',
       imagePath: '/static/website_normal.png',
-      cardTitle: 'IoTシステム',
+      cardTitle: 'IoT',
     },
     {
       component: 'Robot',
       imagePath: '/static/website_normal.png',
-      cardTitle: 'ロボット',
+      cardTitle: 'Robot',
     },
   ];
 
@@ -36,12 +36,12 @@ function Career() {
     {
       component: 'Portfolio',
       imagePath: '/static/website_normal.png',
-      cardTitle: 'ポートフォリオ',
+      cardTitle: 'Portfolio',
     },
     {
       component: 'Wedding',
       imagePath: '/static/website_normal.png',
-      cardTitle: '結婚式HP',
+      cardTitle: 'Wedding HP',
     },
   ];
 

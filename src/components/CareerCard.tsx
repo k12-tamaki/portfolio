@@ -20,6 +20,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import WebSystem from './CareerDialog/WebSystem';
 import IoT from './CareerDialog/IoT';
 import Robot from './CareerDialog/Robot';
+import Portfolio from './CareerDialog/Portfolio';
+import Wedding from './CareerDialog/Wedding';
 
 const BootstrapDialogTitle: React.FC<{
   children?: React.ReactNode;
@@ -95,6 +97,8 @@ const CareerCard: React.FC<{
           {component == 'Web' && <WebSystem />}
           {component == 'IoT' && <IoT />}
           {component == 'Robot' && <Robot />}
+          {component == 'Portfolio' && <Portfolio />}
+          {component == 'Wedding' && <Wedding />}
         </DialogContent>
         {/* <DialogContent dividers>{isWebSystem && <WebSystem />}</DialogContent> */}
         {/* <DialogActions>

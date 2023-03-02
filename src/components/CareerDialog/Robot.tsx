@@ -2,28 +2,41 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
+import Divider from '@mui/material/Divider';
 
 const Robot: React.FC = () => {
   return (
     <>
       <Grid container spacing={2}>
-        <Grid xs={8}>
+        <Grid xs={7}>
           <Box>
             <img src="/static/website_normal.png" />
           </Box>
         </Grid>
-        <Grid xs={4}>
-          <Typography>Robot</Typography>
+        <Grid xs={5}>
+          <Typography align="center" variant="h4" sx={{ padding: '20px' }}>
+            Robot(?)の作成
+          </Typography>
+          <Divider />
           <Typography>
-            業者向けにWebシステムの構築を実施していました。
+            指定した製菓を排出するためのロボットを作成しました。
           </Typography>
           <Typography>
-            打ち合わせ・環境構築・開発・インフラ(AWS)・稼働後フォローと幅広く実施しています。
+            RaspberryPiにタッチパネルを接続して、ブラウザで製菓
+            を指定するための画面やそれに付随する全画面の作成を
+            主に担当し、排出機構でPythonを利用しているところのプログラミン
+            グにも携わっていました。
           </Typography>
+          <Typography
+            align="center"
+            variant="h4"
+            sx={{ padding: '20px', marginTop: '50px' }}
+          >
+            使用スキル
+          </Typography>
+          <Divider />
           <Typography>
-            HTML/CSS, JavaScript, Git, Vue, Nuxt.js, Python(Flask), PHP, Smarty,
-            ORM(FastAPI, Peewee, fuelPHP), AWS(EC2, RDS, S3, Route53), Docker,
-            PostgreSQL, MySQL, SQLServer and more...
+            HTML/CSS, JavaScript, Vue, WebSocket, Python, RaspberryPi
           </Typography>
         </Grid>
       </Grid>
