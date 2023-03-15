@@ -9,6 +9,9 @@ import ProfileMessage from './components/ProfileMessage';
 import './css/common.css';
 import './css/Profile.css';
 
+import AvatarImage from 'media/avatar.jpg';
+// import { Typography } from '@mui/material';
+
 const Profile: React.FC = () => {
   return (
     <Box className="mainContent">
@@ -43,19 +46,46 @@ const Profile: React.FC = () => {
             <Grid xs={1} mdOffset="auto">
               <Avatar
                 alt="Tama"
-                src="/static/avatar.jpg"
+                src={AvatarImage}
                 sx={{ width: 100, height: 100 }}
               />
             </Grid>
             <Grid xs={9}>
               <Grid xs={12}>
-                <Box>Twitter: ***</Box>
+                <Box>
+                  Twitter:
+                  <a
+                    href="https://twitter.com/tama_nattsu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    tama_nattsu
+                  </a>
+                </Box>
               </Grid>
               <Grid xs={12} mdOffset="auto">
-                <Box>Instagram: ***</Box>
+                <Box>
+                  Instagram:
+                  <a
+                    href="https://www.instagram.com/tama_katsu13/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    tama_katsu13
+                  </a>
+                </Box>
               </Grid>
               <Grid xs={12} mdOffset="auto">
-                <Box>Github: ***</Box>
+                <Box>
+                  Github:
+                  <a
+                    href="https://github.com/k12-tamaki/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    k12-tamaki
+                  </a>
+                </Box>
               </Grid>
             </Grid>
           </Grid>

@@ -94,11 +94,11 @@ const CareerCard: React.FC<{
           {cardTitle}
         </BootstrapDialogTitle>
         <DialogContent dividers>
-          {component == 'Web' && <WebSystem />}
-          {component == 'IoT' && <IoT />}
-          {component == 'Robot' && <Robot />}
-          {component == 'Portfolio' && <Portfolio />}
-          {component == 'Wedding' && <Wedding />}
+          {component == 'Web' && <WebSystem imagePath={imagePath} />}
+          {component == 'IoT' && <IoT imagePath={imagePath} />}
+          {component == 'Robot' && <Robot imagePath={imagePath} />}
+          {component == 'Portfolio' && <Portfolio imagePath={imagePath} />}
+          {component == 'Wedding' && <Wedding imagePath={imagePath} />}
         </DialogContent>
         {/* <DialogContent dividers>{isWebSystem && <WebSystem />}</DialogContent> */}
         {/* <DialogActions>

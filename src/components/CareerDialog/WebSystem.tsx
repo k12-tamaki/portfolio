@@ -6,7 +6,9 @@ import Divider from '@mui/material/Divider';
 
 // import Grid from '@mui/material/Unstable_Grid2';
 
-const WebSystem: React.FC = () => {
+// import WebImage from '../../media/skill/web.jpg';
+
+const WebSystem: React.FC<{ imagePath: string }> = ({ imagePath }) => {
   return (
     <>
       <Grid container spacing={2}>
@@ -18,7 +20,7 @@ const WebSystem: React.FC = () => {
               alignItems: 'center',
             }}
           >
-            <img src="/static/web_s.jpg" />
+            <img style={{ maxWidth: '100%' }} src={imagePath} />
           </Box>
         </Grid>
         <Grid xs={5}>

@@ -7,6 +7,12 @@ import CareerCard from './components/CareerCard';
 
 import './css/common.css';
 
+import WebImage from 'media/skill/web.jpg';
+import IoTImage from 'media/skill/iot.jpg';
+import RobotImage from 'media/skill/robot.jpg';
+import PortfolioImage from 'media/skill/portfolio.jpg';
+import WeddingImage from 'media/skill/wedding.jpg';
+
 function Career() {
   type cardObj = {
     component: string;
@@ -17,17 +23,17 @@ function Career() {
   const workArrayObject: cardObj[] = [
     {
       component: 'Web',
-      imagePath: '/static/web_s.jpg',
+      imagePath: WebImage,
       cardTitle: 'Web',
     },
     {
       component: 'IoT',
-      imagePath: '/static/website_normal.png',
+      imagePath: IoTImage,
       cardTitle: 'IoT',
     },
     {
       component: 'Robot',
-      imagePath: '/static/website_normal.png',
+      imagePath: RobotImage,
       cardTitle: 'Robot',
     },
   ];
@@ -35,12 +41,12 @@ function Career() {
   const hobbyArrayObject: cardObj[] = [
     {
       component: 'Portfolio',
-      imagePath: '/static/website_normal.png',
+      imagePath: PortfolioImage,
       cardTitle: 'Portfolio',
     },
     {
       component: 'Wedding',
-      imagePath: '/static/website_normal.png',
+      imagePath: WeddingImage,
       cardTitle: 'Wedding HP',
     },
   ];

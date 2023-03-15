@@ -4,13 +4,21 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import Divider from '@mui/material/Divider';
 
-const IoT: React.FC = () => {
+// import IoTImage from '../../media/skill/iot.jpg';
+
+const IoT: React.FC<{ imagePath: string }> = ({ imagePath }) => {
   return (
     <>
       <Grid container spacing={2}>
         <Grid xs={7}>
-          <Box>
-            <img src="/static/website_normal.png" />
+          <Box
+            sx={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
+          >
+            <img style={{ maxWidth: '100%' }} src={imagePath} />
           </Box>
         </Grid>
         <Grid xs={5}>
