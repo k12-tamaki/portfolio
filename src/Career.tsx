@@ -5,7 +5,7 @@ import Grid from '@mui/material/Unstable_Grid2';
 
 import CareerCard from './components/CareerCard';
 
-import './css/common.css';
+// import './css/common.css';
 
 import WebImage from 'media/skill/web.jpg';
 import IoTImage from 'media/skill/iot.jpg';
@@ -52,7 +52,7 @@ function Career() {
   ];
 
   return (
-    <Box className="mainContent">
+    <Box className="mainContent" id="Career">
       <Box className="title">Career</Box>
       <Box className="content">
         <Box className="profile">

@@ -48,8 +48,10 @@
     ]
   },
   "devDependencies": {
+    "@types/react-scroll": "^1.8.6",
     "gh-pages": "^5.0.0",
-    "prettier": "2.8.3"
+    "prettier": "2.8.3",
+    "react-scroll": "^1.8.9"
   },
   "homepage": "https://k12-tamaki.github.io/portfolio"
 }

@@ -1,10 +1,19 @@
 import React from 'react';
+
+// mui
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
+
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+
+// scroll
+import { Link as Scroll } from 'react-scroll';
+
+// Emotion
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 
 // interface Props {
 //   /**
@@ -14,25 +23,30 @@ import Button from '@mui/material/Button';
 //   window?: () => Window;
 // }
 
+// CSS
+const BackGroundCss = css({
+  backgroundColor: `rgba(244,251,254,0.3)`,
+});
+
+// header item
 const navItems = ['Top', 'Profile', 'Career', 'Skill'];
 
 const Header: React.FC = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <CssBaseline />
-      <AppBar component="nav" sx={{ backgroundColor: `rgba(244,251,254,0.5)` }}>
+      <AppBar component="nav" css={BackGroundCss}>
         <Toolbar>
           <Typography
             variant="h6"
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            {/* MUI */}
-          </Typography>
+          ></Typography>
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <Button key={item} sx={{ color: 'black', fontWeight: 'bold' }}>
-                {item}
+              <Button key={item} sx={{ color: 'white', fontWeight: 'bold' }}>
+                <Scroll to={item} smooth={true} offset={-60}>
+                  {item}
+                </Scroll>
               </Button>
             ))}
           </Box>

@@ -10,7 +10,7 @@ import SkillRating from './components/SkillRating';
 // import Grid from '@mui/material/Unstable_Grid2';
 // import Avatar from '@mui/material/Avatar';
 
-import './css/common.css';
+// import './css/common.css';
 
 const labels: { [index: string]: string } = {
   1: '概念は知ってる',
@@ -133,7 +133,7 @@ function Skill() {
   const [hover, setHover] = React.useState(-1);
 
   return (
-    <Box className="mainContent">
+    <Box className="mainContent" id="Skill">
       <Box className="title">Skill</Box>
       <Box className="content">
         <Box className="profile">

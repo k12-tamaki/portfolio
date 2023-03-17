@@ -6,7 +6,7 @@ import Avatar from '@mui/material/Avatar';
 
 import ProfileMessage from './components/ProfileMessage';
 
-import './css/common.css';
+// import './css/common.css';
 import './css/Profile.css';
 
 import AvatarImage from 'media/avatar.jpg';
@@ -14,7 +14,7 @@ import AvatarImage from 'media/avatar.jpg';
 
 const Profile: React.FC = () => {
   return (
-    <Box className="mainContent">
+    <Box className="mainContent" id="Profile">
       <Box className="title">Profile</Box>
       <Box className="content">
         <Box className="profile">

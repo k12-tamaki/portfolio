@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 
-import './css/common.css';
+// import './css/common.css';
 import './css/Top.css';
 
 import { Parallax } from 'react-scroll-parallax';
@@ -30,9 +30,10 @@ const Top: React.FC = () => {
     console.log('Type Start!');
   }, []);
 
+  // Container使えば中央できる？
   return (
     <Parallax speed={-10}>
-      <Box className="mainContent content">
+      <Box className="mainContent content" id="Top">
         <Box className="top">
           <Typing
             className="msg-box"
