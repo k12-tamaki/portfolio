@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-import Box from '@mui/material/Box';
-// import PropTypes from 'prop-types';
+// Mui
+import Typography from '@mui/material/Typography';
 
 const Typing: React.FC<{
   message: string;
   typeEnd: () => void;
   cursor: boolean;
-  className: string;
   speed: number | undefined;
-}> = ({ message, typeEnd, cursor = true, className = '', speed = 1 }) => {
+}> = ({ message, typeEnd, cursor = true, speed = 1 }) => {
   const [text, setText] = useState('');
 
+  // 1文字ずつ表示
   useEffect(() => {
     const charItr: IterableIterator<string> = message[Symbol.iterator]();
     let timerId: NodeJS.Timer;
@@ -31,21 +31,19 @@ const Typing: React.FC<{
   }, []);
 
   return (
-    <Box
-      className={className + (cursor ? ' cursor-blink' : '')}
-      style={{ whiteSpace: 'pre-line' }}
+    <Typography
+      className={cursor ? ' cursor-blink' : ''}
+      style={{
+        whiteSpace: 'pre-line',
+        font: 'bold 300% Consolas, Monaco, monospace',
+        position: 'absolute',
+        top: '45%',
+        left: '10%',
+      }}
     >
       {text}
-    </Box>
+    </Typography>
   );
 };
-
-// Typing.propTypes = {
-//   message: PropTypes.string.isRequired,
-//   typeEnd: PropTypes.func.isRequired,
-//   cursor: PropTypes.bool,
-//   className: PropTypes.string,
-//   speed: PropTypes.number
-// };
 
 export default Typing;
