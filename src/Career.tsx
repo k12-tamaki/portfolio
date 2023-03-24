@@ -55,7 +55,7 @@ function Career() {
     <Box className="mainContent" id="Career">
       <Box className="title">Career</Box>
       <Box className="content">
-        <Box className="profile">
+        <Box className="content-box">
           <Box sx={{ fontSize: '200%' }}>Work</Box>
           <Grid container spacing={2}>
             {workArrayObject.map((workObject, workIndex) => (

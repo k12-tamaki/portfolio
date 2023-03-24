@@ -15,30 +15,12 @@ import ProfileMessage from './components/ProfileMessage';
 // Media
 import AvatarImage from 'media/avatar.jpg';
 
-// Emotion
-/** @jsxImportSource @emotion/react */
-import { css } from '@emotion/react';
-
-// CSS
-const BoxCss = css({
-  width: '80%',
-  height: '80%',
-  minHeight: '80%',
-  padding: '50px',
-  background: 'rgba(255, 255, 255, 0.3)',
-  boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
-  backdropFilter: 'blur(2px)',
-  WebkitBackdropFilter: 'blur(2px)',
-  borderEadius: '10px',
-  border: '1px solid rgba(255, 255, 255, 0.18)',
-});
-
 const Profile: React.FC = () => {
   return (
     <Box className="mainContent" id="Profile">
       <Box className="title">Profile</Box>
       <Box className="content">
-        <Box css={BoxCss}>
+        <Box className="content-box">
           <Grid container spacing={2}>
             <Grid xs={10} mdOffset="auto">
               <ProfileMessage

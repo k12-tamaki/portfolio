@@ -136,7 +136,7 @@ function Skill() {
     <Box className="mainContent" id="Skill">
       <Box className="title">Skill</Box>
       <Box className="content">
-        <Box className="profile">
+        <Box className="content-box">
           <Box>
             <Box>今まで仕事や趣味で学んだスキルをまとめました。</Box>
             <Box>
