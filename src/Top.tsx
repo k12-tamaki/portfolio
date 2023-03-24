@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 // Mui
 import Box from '@mui/material/Box';
 
-// Module
+// Parallax
 import { Parallax } from 'react-scroll-parallax';
 
 // Component
