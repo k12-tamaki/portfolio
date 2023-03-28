@@ -1,28 +1,41 @@
 import React from 'react';
+
+// Mui
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Unstable_Grid2';
 import Divider from '@mui/material/Divider';
 
-// import IoTImage from '../../media/skill/iot.jpg';
+// Emotion
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+
+// CSS
+const BoxCss = css({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+});
+
+const PaddingCss = css({
+  padding: '20px',
+});
+
+const MarginTopCss = css({
+  marginTop: '50px',
+});
 
 const IoT: React.FC<{ imagePath: string }> = ({ imagePath }) => {
   return (
     <>
       <Grid container spacing={2}>
         <Grid xs={7}>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
+          <Box css={BoxCss}>
             <img style={{ maxWidth: '100%' }} src={imagePath} />
           </Box>
         </Grid>
         <Grid xs={5}>
-          <Typography align="center" variant="h4" sx={{ padding: '20px' }}>
+          <Typography align="center" variant="h4" css={PaddingCss}>
             IoTシステムの構築
           </Typography>
           <Divider />
@@ -43,7 +56,7 @@ const IoT: React.FC<{ imagePath: string }> = ({ imagePath }) => {
           <Typography
             align="center"
             variant="h4"
-            sx={{ padding: '20px', marginTop: '50px' }}
+            css={[PaddingCss, MarginTopCss]}
           >
             使用スキル
           </Typography>

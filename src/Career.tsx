@@ -1,17 +1,31 @@
 import React from 'react';
 
+// Mui
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Unstable_Grid2';
 
+// Component
 import CareerCard from './components/CareerCard';
 
-// import './css/common.css';
-
+// Media
 import WebImage from 'media/skill/web.jpg';
 import IoTImage from 'media/skill/iot.jpg';
 import RobotImage from 'media/skill/robot.jpg';
 import PortfolioImage from 'media/skill/portfolio.jpg';
 import WeddingImage from 'media/skill/wedding.jpg';
+
+// Emotion
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
+
+// CSS
+const FontSizeCss = css({
+  fontSize: '200%',
+});
+
+const MarginTopCss = css({
+  marginTop: '50px',
+});
 
 function Career() {
   type cardObj = {
@@ -56,7 +70,7 @@ function Career() {
       <Box className="title">Career</Box>
       <Box className="content">
         <Box className="content-box">
-          <Box sx={{ fontSize: '200%' }}>Work</Box>
+          <Box css={FontSizeCss}>Work</Box>
           <Grid container spacing={2}>
             {workArrayObject.map((workObject, workIndex) => (
               <Grid xs={4} key={workIndex}>
@@ -68,7 +82,7 @@ function Career() {
               </Grid>
             ))}
           </Grid>
-          <Box sx={{ fontSize: '200%', marginTop: '50px' }}>Hobby</Box>
+          <Box css={[FontSizeCss, MarginTopCss]}>Hobby</Box>
           <Grid container spacing={2}>
             {hobbyArrayObject.map((hobbyObject, hobbyIndex) => (
               <Grid xs={4} key={hobbyIndex}>

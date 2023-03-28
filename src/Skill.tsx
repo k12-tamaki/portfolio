@@ -1,16 +1,27 @@
 import React from 'react';
 
+// Mui
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 import StarIcon from '@mui/icons-material/Star';
 
+// Component
 import SkillRating from './components/SkillRating';
 
-// import Grid from '@mui/material/Unstable_Grid2';
-// import Avatar from '@mui/material/Avatar';
+// Emotion
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 
-// import './css/common.css';
+// CSS
+const BoxCss = css({
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginTop: '30px',
+});
+
+const StarIconCss = css({ opacity: 0.55 });
 
 const labels: { [index: string]: string } = {
   1: '概念は知ってる',
@@ -24,6 +35,7 @@ function getLabelText(value: number) {
   return `${value} Star${value !== 1 ? 's' : ''}, ${labels[value]}`;
 }
 
+// Type
 type SkillsType = {
   title: string;
   rates: {
@@ -33,6 +45,7 @@ type SkillsType = {
   }[];
 }[];
 
+// SkillData
 const SkillList: SkillsType = [
   {
     title: '開発環境/インフラ',
@@ -144,18 +157,9 @@ function Skill() {
             </Box>
             <Box>インフラから運用まで業務に携われることが強みになります。</Box>
           </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              marginTop: '30px',
-            }}
-          >
+          <Box css={BoxCss}>
             <Rating
-              // name="hover-feedback"
               value={value}
-              // precision={1}
               getLabelText={getLabelText}
               onChange={(event, newValue) => {
                 setValue(newValue);
@@ -163,9 +167,7 @@ function Skill() {
               onChangeActive={(event, newHover) => {
                 setHover(newHover);
               }}
-              emptyIcon={
-                <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
-              }
+              emptyIcon={<StarIcon css={StarIconCss} fontSize="inherit" />}
               size="large"
             />
             {value !== null && (
@@ -176,14 +178,7 @@ function Skill() {
           </Box>
           {SkillList.map((skill, index) => (
             <SkillRating key={index} item={skill} />
-            // <SkillRating item={skill} />
-            // <SkillRating item={skill} />
           ))}
-          {/* <Box sx={{ fontSize: '200%' }}>DevOps</Box>
-          <Typography component="legend">AWS</Typography>
-          <Rating name="read-only" value={5} readOnly /> */}
-          {/* <Box sx={{ fontSize: '200%' }}>FrontEnd</Box> */}
-          {/* <Box sx={{ fontSize: '200%' }}>BackEnd</Box> */}
         </Box>
       </Box>
     </Box>

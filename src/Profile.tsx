@@ -15,6 +15,12 @@ import ProfileMessage from './components/ProfileMessage';
 // Media
 import AvatarImage from 'media/avatar.jpg';
 
+// CSS
+const AvatarSX = {
+  width: 100,
+  height: 100,
+};
+
 const Profile: React.FC = () => {
   return (
     <Box className="mainContent" id="Profile">
@@ -47,14 +53,10 @@ const Profile: React.FC = () => {
           </Grid>
           <Grid container spacing={2}>
             <Grid xs={1} mdOffset="auto">
-              <Avatar
-                alt="Tama"
-                src={AvatarImage}
-                sx={{ width: 100, height: 100 }}
-              />
+              <Avatar alt="Tama" src={AvatarImage} sx={AvatarSX} />
             </Grid>
-            <Grid xs={9}>
-              <Grid xs={4}>
+            <Grid container xs={9}>
+              <Grid xs={3}>
                 <TwitterIcon fontSize="large" />
                 <a
                   href="https://twitter.com/tama_nattsu/"
@@ -64,7 +66,7 @@ const Profile: React.FC = () => {
                   tama_nattsu
                 </a>
               </Grid>
-              <Grid xs={4}>
+              <Grid xs={3}>
                 <InstagramIcon fontSize="large" />
                 <a
                   href="https://www.instagram.com/tama_katsu13/"
@@ -74,7 +76,7 @@ const Profile: React.FC = () => {
                   tama_katsu13
                 </a>
               </Grid>
-              <Grid xs={4}>
+              <Grid xs={3}>
                 <GitHubIcon fontSize="large" />
                 <a
                   href="https://github.com/k12-tamaki/"
